@@ -6,8 +6,8 @@ export default function SiteHeader() {
     <div className="flex flex-col gap-2 md:flex-row items-center justify-between w-full">
       <Link href="/">
         <Image
-          src="/buildstation-logo.svg"
-          alt="buildstation Logo"
+          src="/ethstation-logo.svg"
+          alt="ethstation Logo"
           width={1200}
           height={250}
           className="max-w-48 dark:invert"

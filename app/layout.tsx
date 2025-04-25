@@ -1,6 +1,5 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import '@rainbow-me/rainbowkit/styles.css';
 import SiteHeader from "@/components/site-header";
 import type { Metadata } from 'next'
 import Footer from "@/components/footer";
