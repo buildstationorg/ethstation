@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'ethstation',
-    description: 'join the global movement and build the future with us',
+    description: 'build on ethereum',
     creator: '@ethstationorg',
     images: ['/ethstation-tbn.png'],
   },
