@@ -3,7 +3,7 @@ import "./globals.css";
 import SiteHeader from "@/components/site-header";
 import type { Metadata } from 'next'
 import Footer from "@/components/footer";
-import { Providers } from '@/app/providers';
+import Script from "next/script";
 import { ThemeProvider } from "@/components/theme-provider"
 
 const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"] });
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'ethstation',
     description: 'build on ethereum',
-    creator: '@ethstationorg',
+    creator: '@zxstim',
     images: ['/ethstation-tbn.png'],
   },
 }
@@ -45,6 +45,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <Script
+        defer
+        src="https://analytics.zxstim.com/script.js"
+        data-website-id="7d95153e-bd46-4aff-84b0-fb668363e6a0"
+      />
       <body className={jetBrainsMono.className}>
         <ThemeProvider
           attribute="class"
@@ -52,13 +57,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Providers>
-            <main className="flex flex-col gap-12 items-center p-6 md:p-10 pb-12">
-              <SiteHeader />
-                {children}
-              <Footer />
-            </main>
-          </Providers>
+          <main className="flex flex-col gap-12 items-center p-6 md:p-10 pb-12">
+            <SiteHeader />
+              {children}
+            <Footer />
+          </main>
         </ThemeProvider>
       </body>
     </html>
